@@ -154,10 +154,9 @@ function Navbar() {
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: "#1A1A1A" }}>
-      {/* Background image */}
+      {/* Background gradient */}
       <div className="absolute inset-0 z-0">
-        <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-40" />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(5,11,24,0.3) 0%, rgba(5,11,24,0.6) 60%, rgba(5,11,24,1) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(26,26,26,1) 0%, rgba(40,40,60,0.8) 50%, rgba(26,26,26,1) 100%)" }} />
       </div>
 
       {/* Animated grid overlay */}

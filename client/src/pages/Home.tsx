@@ -1,7 +1,7 @@
 /* ============================================================
-   AutomataForge — Home Page
-   Design: Dark Futurism / Cyberpunk Editorial
-   Colors: #050B18 base, #00D4FF cyan, #FF2D78 magenta
+   Next Level AI Services — Web Development Landing Page
+   Design: Black + Orange High-Impact Branding
+   Colors: #1A1A1A base, #FF6B35 orange, #FFFFFF text
    Fonts: Syne (display 800) + DM Sans (body 400/500)
    Layout: Full-page sections with bento grid and glassmorphism
    ============================================================ */
@@ -14,10 +14,8 @@ import {
   BookOpen, Play, Award, TrendingUp, Mail, ExternalLink
 } from "lucide-react";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663493426967/bTWcehVvssmSWJ8YR4Vajq/hero_bg-5MUwohWgUNbukLJjB2wxGs.webp";
-const COURSE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663493426967/bTWcehVvssmSWJ8YR4Vajq/course_card-8Rb4S38oe5RhLBxEMnR2Z8.webp";
-const WEBDEV_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663493426967/bTWcehVvssmSWJ8YR4Vajq/webdev_card-9tFHxP3BdNKCPH6E7EHXNP.webp";
-const ABOUT_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663493426967/bTWcehVvssmSWJ8YR4Vajq/about_bg-F3WXAYEdFXfma4hjCk2dHS.webp";
+// Next Level AI Services — Web Development Focus
+// No external images needed for this focused landing page
 
 // Animated counter
 function Counter({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {
@@ -80,19 +78,19 @@ function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? "rgba(5, 11, 24, 0.9)" : "transparent",
+        background: scrolled ? "rgba(26, 26, 26, 0.9)" : "transparent",
         backdropFilter: scrolled ? "blur(20px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(0,212,255,0.1)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(255, 107, 53,0.1)" : "none",
       }}
     >
       <div className="container flex items-center justify-between py-4">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #00D4FF, #FF2D78)" }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #FF6B35, #FF6B35)" }}>
             <Zap className="w-4 h-4 text-white" />
           </div>
-          <span className="font-bold text-xl tracking-tight" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
-            Automata<span style={{ color: "#00D4FF" }}>Forge</span>
+          <span className="font-bold text-xl tracking-tight" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
+            Next Level<span style={{ color: "#FF6B35" }}>Forge</span>
           </span>
         </a>
 
@@ -103,9 +101,9 @@ function Navbar() {
               key={l.label}
               href={l.href}
               className="text-sm font-medium transition-colors duration-200"
-              style={{ color: "rgba(232,240,254,0.7)", fontFamily: "DM Sans, sans-serif" }}
-              onMouseEnter={e => (e.currentTarget.style.color = "#00D4FF")}
-              onMouseLeave={e => (e.currentTarget.style.color = "rgba(232,240,254,0.7)")}
+              style={{ color: "rgba(255, 255, 255,0.7)", fontFamily: "DM Sans, sans-serif" }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#FF6B35")}
+              onMouseLeave={e => (e.currentTarget.style.color = "rgba(255, 255, 255,0.7)")}
             >
               {l.label}
             </a>
@@ -133,11 +131,11 @@ function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden"
-            style={{ background: "rgba(5,11,24,0.98)", borderBottom: "1px solid rgba(0,212,255,0.15)" }}
+            style={{ background: "rgba(5,11,24,0.98)", borderBottom: "1px solid rgba(255, 107, 53,0.15)" }}
           >
             <div className="container py-4 flex flex-col gap-4">
               {links.map(l => (
-                <a key={l.label} href={l.href} className="text-sm font-medium py-2" style={{ color: "rgba(232,240,254,0.8)", fontFamily: "DM Sans, sans-serif" }} onClick={() => setOpen(false)}>
+                <a key={l.label} href={l.href} className="text-sm font-medium py-2" style={{ color: "rgba(255, 255, 255,0.8)", fontFamily: "DM Sans, sans-serif" }} onClick={() => setOpen(false)}>
                   {l.label}
                 </a>
               ))}
@@ -155,7 +153,7 @@ function Navbar() {
 // Hero Section
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: "#050B18" }}>
+    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: "#1A1A1A" }}>
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-40" />
@@ -164,7 +162,7 @@ function Hero() {
 
       {/* Animated grid overlay */}
       <div className="absolute inset-0 z-0 opacity-10" style={{
-        backgroundImage: "linear-gradient(rgba(0,212,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.3) 1px, transparent 1px)",
+        backgroundImage: "linear-gradient(rgba(255, 107, 53,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 53,0.3) 1px, transparent 1px)",
         backgroundSize: "60px 60px"
       }} />
 
@@ -176,7 +174,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-8"
-            style={{ background: "rgba(0,212,255,0.1)", border: "1px solid rgba(0,212,255,0.3)", color: "#00D4FF", fontFamily: "DM Sans, sans-serif" }}
+            style={{ background: "rgba(255, 107, 53,0.1)", border: "1px solid rgba(255, 107, 53,0.3)", color: "#FF6B35", fontFamily: "DM Sans, sans-serif" }}
           >
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
             AI-Powered Agency — Est. 2024
@@ -188,7 +186,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl md:text-7xl font-black leading-none mb-6"
-            style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE", letterSpacing: "-0.02em" }}
+            style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF", letterSpacing: "-0.02em" }}
           >
             Building the Web.
             <br />
@@ -203,7 +201,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-lg md:text-xl mb-10 max-w-2xl leading-relaxed"
-            style={{ color: "rgba(232,240,254,0.7)", fontFamily: "DM Sans, sans-serif" }}
+            style={{ color: "rgba(255, 255, 255,0.7)", fontFamily: "DM Sans, sans-serif" }}
           >
             We build high-converting websites in 48 hours using advanced AI frameworks. We also teach you to deploy autonomous AI agents — Manus, Claude Code, and Open Interpreter — safely on any device.
           </motion.p>
@@ -243,7 +241,7 @@ function Hero() {
               <div className="text-3xl font-black mb-1 text-cyan-glow" style={{ fontFamily: "Syne, sans-serif" }}>
                 <Counter end={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="text-xs uppercase tracking-widest" style={{ color: "rgba(232,240,254,0.5)", fontFamily: "DM Sans, sans-serif" }}>
+              <div className="text-xs uppercase tracking-widest" style={{ color: "rgba(255, 255, 255,0.5)", fontFamily: "DM Sans, sans-serif" }}>
                 {stat.label}
               </div>
             </div>
@@ -262,7 +260,7 @@ function Services() {
       title: "The Starter Site",
       price: "$299",
       delivery: "48 Hours",
-      color: "#00D4FF",
+      color: "#FF6B35",
       features: ["3-Page Responsive Site", "Mobile Optimized", "Contact Form", "Basic SEO Setup", "1 Revision Round"],
       cta: "Order on Fiverr",
       href: "#contact",
@@ -272,7 +270,7 @@ function Services() {
       title: "The Business Pro",
       price: "$599",
       delivery: "4 Days",
-      color: "#FF2D78",
+      color: "#FF6B35",
       features: ["7-Page Full Site", "Newsletter Integration", "Booking System", "Analytics Setup", "2 Revision Rounds"],
       cta: "Order on Fiverr",
       href: "#contact",
@@ -291,18 +289,18 @@ function Services() {
   ];
 
   return (
-    <section id="services" className="py-24" style={{ background: "#050B18" }}>
+    <section id="services" className="py-24" style={{ background: "#1A1A1A" }}>
       <div className="container">
         <FadeIn>
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-6"
-              style={{ background: "rgba(0,212,255,0.1)", border: "1px solid rgba(0,212,255,0.2)", color: "#00D4FF", fontFamily: "DM Sans, sans-serif" }}>
+              style={{ background: "rgba(255, 107, 53,0.1)", border: "1px solid rgba(255, 107, 53,0.2)", color: "#FF6B35", fontFamily: "DM Sans, sans-serif" }}>
               <Zap className="w-3 h-3" /> Web Development Services
             </div>
-            <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
+            <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
               Agency Quality.<br /><span className="gradient-text">Startup Speed.</span>
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: "rgba(232,240,254,0.6)", fontFamily: "DM Sans, sans-serif" }}>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "rgba(255, 255, 255,0.6)", fontFamily: "DM Sans, sans-serif" }}>
               We leverage advanced AI frameworks to deliver stunning, high-performing websites at a fraction of the traditional cost and timeline.
             </p>
           </div>
@@ -314,10 +312,10 @@ function Services() {
             <div className="glass-card overflow-hidden h-full">
               <img src={WEBDEV_IMG} alt="Web Development" className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
+                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
                   AI-Accelerated Web Development
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "rgba(232,240,254,0.6)", fontFamily: "DM Sans, sans-serif" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "rgba(255, 255, 255,0.6)", fontFamily: "DM Sans, sans-serif" }}>
                   Our proprietary AI-assisted development pipeline eliminates the bottlenecks of traditional web development. You get agency-quality results with startup-speed delivery. Every site is responsive, SEO-optimized, and built to convert.
                 </p>
               </div>
@@ -326,17 +324,17 @@ function Services() {
           <FadeIn delay={0.2}>
             <div className="grid grid-cols-2 gap-4 h-full">
               {[
-                { icon: <Clock className="w-5 h-5" />, title: "48hr Delivery", desc: "Starter sites delivered in 2 business days", color: "#00D4FF" },
-                { icon: <Shield className="w-5 h-5" />, title: "Satisfaction Guarantee", desc: "We revise until you're happy", color: "#FF2D78" },
+                { icon: <Clock className="w-5 h-5" />, title: "48hr Delivery", desc: "Starter sites delivered in 2 business days", color: "#FF6B35" },
+                { icon: <Shield className="w-5 h-5" />, title: "Satisfaction Guarantee", desc: "We revise until you're happy", color: "#FF6B35" },
                 { icon: <TrendingUp className="w-5 h-5" />, title: "SEO Optimized", desc: "Built to rank from day one", color: "#7B61FF" },
-                { icon: <Users className="w-5 h-5" />, title: "Dedicated Support", desc: "Direct access to your developer", color: "#00D4FF" },
+                { icon: <Users className="w-5 h-5" />, title: "Dedicated Support", desc: "Direct access to your developer", color: "#FF6B35" },
               ].map((item, i) => (
                 <div key={i} className="glass-card p-4 flex flex-col gap-2">
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: `${item.color}20`, color: item.color }}>
                     {item.icon}
                   </div>
-                  <div className="font-bold text-sm" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>{item.title}</div>
-                  <div className="text-xs" style={{ color: "rgba(232,240,254,0.5)", fontFamily: "DM Sans, sans-serif" }}>{item.desc}</div>
+                  <div className="font-bold text-sm" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>{item.title}</div>
+                  <div className="text-xs" style={{ color: "rgba(255, 255, 255,0.5)", fontFamily: "DM Sans, sans-serif" }}>{item.desc}</div>
                 </div>
               ))}
             </div>
@@ -349,7 +347,7 @@ function Services() {
             <FadeIn key={i} delay={i * 0.1}>
               <div
                 className="glass-card p-6 flex flex-col h-full relative overflow-hidden transition-transform duration-300 hover:-translate-y-1"
-                style={{ border: svc.popular ? `1px solid ${svc.color}50` : "1px solid rgba(0,212,255,0.15)" }}
+                style={{ border: svc.popular ? `1px solid ${svc.color}50` : "1px solid rgba(255, 107, 53,0.15)" }}
               >
                 {svc.popular && (
                   <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
@@ -360,17 +358,17 @@ function Services() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: `${svc.color}15`, color: svc.color }}>
                   {svc.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-1" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>{svc.title}</h3>
+                <h3 className="text-xl font-bold mb-1" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>{svc.title}</h3>
                 <div className="flex items-baseline gap-2 mb-1">
                   <span className="text-3xl font-black" style={{ fontFamily: "Syne, sans-serif", color: svc.color }}>{svc.price}</span>
                 </div>
-                <div className="flex items-center gap-1 mb-4 text-xs" style={{ color: "rgba(232,240,254,0.5)", fontFamily: "DM Sans, sans-serif" }}>
+                <div className="flex items-center gap-1 mb-4 text-xs" style={{ color: "rgba(255, 255, 255,0.5)", fontFamily: "DM Sans, sans-serif" }}>
                   <Clock className="w-3 h-3" /> {svc.delivery} delivery
                 </div>
                 <div className="section-divider mb-4" />
                 <ul className="flex flex-col gap-2 mb-6 flex-1">
                   {svc.features.map((f, fi) => (
-                    <li key={fi} className="flex items-center gap-2 text-sm" style={{ color: "rgba(232,240,254,0.7)", fontFamily: "DM Sans, sans-serif" }}>
+                    <li key={fi} className="flex items-center gap-2 text-sm" style={{ color: "rgba(255, 255, 255,0.7)", fontFamily: "DM Sans, sans-serif" }}>
                       <CheckCircle2 className="w-4 h-4 flex-shrink-0" style={{ color: svc.color }} />
                       {f}
                     </li>
@@ -406,8 +404,8 @@ function Course() {
   ];
 
   const tiers = [
-    { name: "The Playbook", price: "$49", format: "Comprehensive PDF Guide", features: ["All 6 Modules (Written)", "Copy-Paste Command Reference", "Troubleshooting Cheatsheet", "Lifetime Updates"], color: "#00D4FF" },
-    { name: "The Masterclass", price: "$97", format: "PDF + Full Video Course", features: ["Everything in Playbook", "6+ Hours of Video Content", "Advanced Workflow Templates", "Private Community Access"], color: "#FF2D78", popular: true },
+    { name: "The Playbook", price: "$49", format: "Comprehensive PDF Guide", features: ["All 6 Modules (Written)", "Copy-Paste Command Reference", "Troubleshooting Cheatsheet", "Lifetime Updates"], color: "#FF6B35" },
+    { name: "The Masterclass", price: "$97", format: "PDF + Full Video Course", features: ["Everything in Playbook", "6+ Hours of Video Content", "Advanced Workflow Templates", "Private Community Access"], color: "#FF6B35", popular: true },
     { name: "VIP Setup", price: "$249", format: "Course + 1-on-1 Session", features: ["Everything in Masterclass", "60-Min Live Setup Call", "Custom Configuration Review", "Priority Email Support"], color: "#7B61FF" },
   ];
 
@@ -417,13 +415,13 @@ function Course() {
         <FadeIn>
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-6"
-              style={{ background: "rgba(255,45,120,0.1)", border: "1px solid rgba(255,45,120,0.2)", color: "#FF2D78", fontFamily: "DM Sans, sans-serif" }}>
+              style={{ background: "rgba(255,45,120,0.1)", border: "1px solid rgba(255,45,120,0.2)", color: "#FF6B35", fontFamily: "DM Sans, sans-serif" }}>
               <BookOpen className="w-3 h-3" /> AI Agent Mastery Course
             </div>
-            <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
+            <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
               Stop Chatting.<br /><span className="gradient-text">Start Deploying.</span>
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: "rgba(232,240,254,0.6)", fontFamily: "DM Sans, sans-serif" }}>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "rgba(255, 255, 255,0.6)", fontFamily: "DM Sans, sans-serif" }}>
               The definitive guide to installing and operating autonomous AI agents — Manus, Claude Code, and Open Interpreter — safely on any device.
             </p>
           </div>
@@ -435,30 +433,30 @@ function Course() {
             <div className="relative">
               <img src={COURSE_IMG} alt="AI Agent Course" className="rounded-2xl w-full" style={{ boxShadow: "0 0 60px rgba(255,45,120,0.2)" }} />
               <div className="absolute -bottom-4 -right-4 glass-card p-4 flex items-center gap-3" style={{ border: "1px solid rgba(255,45,120,0.3)" }}>
-                <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: "rgba(255,45,120,0.2)", color: "#FF2D78" }}>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: "rgba(255,45,120,0.2)", color: "#FF6B35" }}>
                   <Award className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold" style={{ color: "#E8F0FE", fontFamily: "Syne, sans-serif" }}>Certificate of Completion</div>
-                  <div className="text-xs" style={{ color: "rgba(232,240,254,0.5)", fontFamily: "DM Sans, sans-serif" }}>Included with all tiers</div>
+                  <div className="text-xs font-bold" style={{ color: "#FFFFFF", fontFamily: "Syne, sans-serif" }}>Certificate of Completion</div>
+                  <div className="text-xs" style={{ color: "rgba(255, 255, 255,0.5)", fontFamily: "DM Sans, sans-serif" }}>Included with all tiers</div>
                 </div>
               </div>
             </div>
           </FadeIn>
           <FadeIn delay={0.2}>
             <div>
-              <h3 className="text-2xl font-bold mb-6" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
+              <h3 className="text-2xl font-bold mb-6" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
                 What You Will Learn
               </h3>
               <div className="flex flex-col gap-3">
                 {modules.map((mod, i) => (
                   <div key={i} className="flex gap-4 p-4 rounded-xl transition-all duration-200 hover:bg-white/5" style={{ cursor: "default" }}>
-                    <div className="text-2xl font-black flex-shrink-0 w-10" style={{ fontFamily: "Syne, sans-serif", color: "rgba(0,212,255,0.3)" }}>
+                    <div className="text-2xl font-black flex-shrink-0 w-10" style={{ fontFamily: "Syne, sans-serif", color: "rgba(255, 107, 53,0.3)" }}>
                       {mod.num}
                     </div>
                     <div>
-                      <div className="font-bold text-sm mb-1" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>{mod.title}</div>
-                      <div className="text-xs leading-relaxed" style={{ color: "rgba(232,240,254,0.5)", fontFamily: "DM Sans, sans-serif" }}>{mod.desc}</div>
+                      <div className="font-bold text-sm mb-1" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>{mod.title}</div>
+                      <div className="text-xs leading-relaxed" style={{ color: "rgba(255, 255, 255,0.5)", fontFamily: "DM Sans, sans-serif" }}>{mod.desc}</div>
                     </div>
                   </div>
                 ))}
@@ -469,7 +467,7 @@ function Course() {
 
         {/* Course pricing */}
         <FadeIn>
-          <h3 className="text-2xl font-bold text-center mb-8" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
+          <h3 className="text-2xl font-bold text-center mb-8" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
             Choose Your Path
           </h3>
         </FadeIn>
@@ -478,7 +476,7 @@ function Course() {
             <FadeIn key={i} delay={i * 0.1}>
               <div
                 className="glass-card p-6 flex flex-col h-full relative transition-transform duration-300 hover:-translate-y-1"
-                style={{ border: tier.popular ? `1px solid ${tier.color}50` : "1px solid rgba(0,212,255,0.15)" }}
+                style={{ border: tier.popular ? `1px solid ${tier.color}50` : "1px solid rgba(255, 107, 53,0.15)" }}
               >
                 {tier.popular && (
                   <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
@@ -486,13 +484,13 @@ function Course() {
                     Best Value
                   </div>
                 )}
-                <div className="font-bold text-lg mb-1" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>{tier.name}</div>
-                <div className="text-xs mb-3" style={{ color: "rgba(232,240,254,0.5)", fontFamily: "DM Sans, sans-serif" }}>{tier.format}</div>
+                <div className="font-bold text-lg mb-1" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>{tier.name}</div>
+                <div className="text-xs mb-3" style={{ color: "rgba(255, 255, 255,0.5)", fontFamily: "DM Sans, sans-serif" }}>{tier.format}</div>
                 <div className="text-4xl font-black mb-4" style={{ fontFamily: "Syne, sans-serif", color: tier.color }}>{tier.price}</div>
                 <div className="section-divider mb-4" />
                 <ul className="flex flex-col gap-2 mb-6 flex-1">
                   {tier.features.map((f, fi) => (
-                    <li key={fi} className="flex items-center gap-2 text-sm" style={{ color: "rgba(232,240,254,0.7)", fontFamily: "DM Sans, sans-serif" }}>
+                    <li key={fi} className="flex items-center gap-2 text-sm" style={{ color: "rgba(255, 255, 255,0.7)", fontFamily: "DM Sans, sans-serif" }}>
                       <CheckCircle2 className="w-4 h-4 flex-shrink-0" style={{ color: tier.color }} />
                       {f}
                     </li>
@@ -526,7 +524,7 @@ function Process() {
   ];
 
   return (
-    <section className="py-24" style={{ background: "#050B18" }}>
+    <section className="py-24" style={{ background: "#1A1A1A" }}>
       <div className="container">
         <FadeIn>
           <div className="text-center mb-16">
@@ -534,7 +532,7 @@ function Process() {
               style={{ background: "rgba(123,97,255,0.1)", border: "1px solid rgba(123,97,255,0.2)", color: "#7B61FF", fontFamily: "DM Sans, sans-serif" }}>
               <Zap className="w-3 h-3" /> How It Works
             </div>
-            <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
+            <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
               From Brief to Live<br /><span className="gradient-text">in Days, Not Weeks.</span>
             </h2>
           </div>
@@ -543,15 +541,15 @@ function Process() {
           {steps.map((step, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className="glass-card p-6 relative">
-                <div className="text-5xl font-black mb-4 opacity-10" style={{ fontFamily: "Syne, sans-serif", color: "#00D4FF" }}>{step.num}</div>
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: "rgba(0,212,255,0.1)", color: "#00D4FF" }}>
+                <div className="text-5xl font-black mb-4 opacity-10" style={{ fontFamily: "Syne, sans-serif", color: "#FF6B35" }}>{step.num}</div>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: "rgba(255, 107, 53,0.1)", color: "#FF6B35" }}>
                   {step.icon}
                 </div>
-                <h3 className="font-bold text-lg mb-2" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>{step.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "rgba(232,240,254,0.55)", fontFamily: "DM Sans, sans-serif" }}>{step.desc}</p>
+                <h3 className="font-bold text-lg mb-2" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>{step.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "rgba(255, 255, 255,0.55)", fontFamily: "DM Sans, sans-serif" }}>{step.desc}</p>
                 {i < steps.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 -right-3 z-10">
-                    <ChevronRight className="w-6 h-6" style={{ color: "rgba(0,212,255,0.3)" }} />
+                    <ChevronRight className="w-6 h-6" style={{ color: "rgba(255, 107, 53,0.3)" }} />
                   </div>
                 )}
               </div>
@@ -566,7 +564,7 @@ function Process() {
 // Testimonials
 function Testimonials() {
   const reviews = [
-    { name: "Sarah K.", role: "Founder, Bloom Botanicals", text: "AutomataForge delivered my e-commerce site in 5 days. The quality was exceptional and the process was completely painless. I had zero technical involvement.", rating: 5, platform: "Fiverr" },
+    { name: "Sarah K.", role: "Founder, Bloom Botanicals", text: "Next Level AI Services delivered my e-commerce site in 5 days. The quality was exceptional and the process was completely painless. I had zero technical involvement.", rating: 5, platform: "Fiverr" },
     { name: "Marcus T.", role: "Marketing Director, NovaTech", text: "The AI agent course was exactly what I needed. The step-by-step instructions worked perfectly on my Mac. I had Open Interpreter running in under an hour.", rating: 5, platform: "Gumroad" },
     { name: "Priya M.", role: "Solo Consultant", text: "I was skeptical about the 48-hour claim. They delivered in 36. The site looks better than anything I've seen from agencies charging 10x the price.", rating: 5, platform: "Upwork" },
     { name: "James R.", role: "CTO, Stackwise Labs", text: "The VIP setup session was worth every penny. They helped me configure Claude Code for our entire codebase and set up proper sandboxing. Game-changing.", rating: 5, platform: "Direct" },
@@ -578,10 +576,10 @@ function Testimonials() {
         <FadeIn>
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-6"
-              style={{ background: "rgba(0,212,255,0.1)", border: "1px solid rgba(0,212,255,0.2)", color: "#00D4FF", fontFamily: "DM Sans, sans-serif" }}>
+              style={{ background: "rgba(255, 107, 53,0.1)", border: "1px solid rgba(255, 107, 53,0.2)", color: "#FF6B35", fontFamily: "DM Sans, sans-serif" }}>
               <Star className="w-3 h-3" /> Client Reviews
             </div>
-            <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
+            <h2 className="text-4xl md:text-5xl font-black mb-4" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
               Trusted by <span className="gradient-text">Builders</span>
             </h2>
           </div>
@@ -594,16 +592,16 @@ function Testimonials() {
                   {Array.from({ length: r.rating }).map((_, si) => (
                     <Star key={si} className="w-4 h-4 fill-current" style={{ color: "#FFD700" }} />
                   ))}
-                  <span className="ml-auto text-xs px-2 py-1 rounded-full" style={{ background: "rgba(0,212,255,0.1)", color: "#00D4FF", fontFamily: "DM Sans, sans-serif" }}>
+                  <span className="ml-auto text-xs px-2 py-1 rounded-full" style={{ background: "rgba(255, 107, 53,0.1)", color: "#FF6B35", fontFamily: "DM Sans, sans-serif" }}>
                     via {r.platform}
                   </span>
                 </div>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: "rgba(232,240,254,0.75)", fontFamily: "DM Sans, sans-serif" }}>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "rgba(255, 255, 255,0.75)", fontFamily: "DM Sans, sans-serif" }}>
                   "{r.text}"
                 </p>
                 <div>
-                  <div className="font-bold text-sm" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>{r.name}</div>
-                  <div className="text-xs" style={{ color: "rgba(232,240,254,0.4)", fontFamily: "DM Sans, sans-serif" }}>{r.role}</div>
+                  <div className="font-bold text-sm" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>{r.name}</div>
+                  <div className="text-xs" style={{ color: "rgba(255, 255, 255,0.4)", fontFamily: "DM Sans, sans-serif" }}>{r.role}</div>
                 </div>
               </div>
             </FadeIn>
@@ -617,7 +615,7 @@ function Testimonials() {
 // About Section
 function About() {
   return (
-    <section id="about" className="py-24 relative overflow-hidden" style={{ background: "#050B18" }}>
+    <section id="about" className="py-24 relative overflow-hidden" style={{ background: "#1A1A1A" }}>
       <div className="absolute inset-0 z-0">
         <img src={ABOUT_BG} alt="" className="w-full h-full object-cover opacity-15" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(5,11,24,0.95) 50%, rgba(5,11,24,0.7) 100%)" }} />
@@ -626,16 +624,16 @@ function About() {
         <div className="max-w-2xl">
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-6"
-              style={{ background: "rgba(255,45,120,0.1)", border: "1px solid rgba(255,45,120,0.2)", color: "#FF2D78", fontFamily: "DM Sans, sans-serif" }}>
-              <Users className="w-3 h-3" /> About AutomataForge
+              style={{ background: "rgba(255,45,120,0.1)", border: "1px solid rgba(255,45,120,0.2)", color: "#FF6B35", fontFamily: "DM Sans, sans-serif" }}>
+              <Users className="w-3 h-3" /> About Next Level AI Services
             </div>
-            <h2 className="text-4xl md:text-5xl font-black mb-6" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
+            <h2 className="text-4xl md:text-5xl font-black mb-6" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
               We Are the Future<br /><span className="gradient-text">of Digital Work.</span>
             </h2>
-            <p className="text-lg leading-relaxed mb-6" style={{ color: "rgba(232,240,254,0.7)", fontFamily: "DM Sans, sans-serif" }}>
-              AutomataForge was founded on a single conviction: that the combination of human creativity and autonomous AI agents represents the most powerful force in modern business. We are not just a web development agency or a course provider — we are an AI-native operation that uses the same tools we teach to deliver the services we sell.
+            <p className="text-lg leading-relaxed mb-6" style={{ color: "rgba(255, 255, 255,0.7)", fontFamily: "DM Sans, sans-serif" }}>
+              Next Level AI Services was founded on a single conviction: that the combination of human creativity and autonomous AI agents represents the most powerful force in modern business. We are not just a web development agency or a course provider — we are an AI-native operation that uses the same tools we teach to deliver the services we sell.
             </p>
-            <p className="text-base leading-relaxed mb-8" style={{ color: "rgba(232,240,254,0.55)", fontFamily: "DM Sans, sans-serif" }}>
+            <p className="text-base leading-relaxed mb-8" style={{ color: "rgba(255, 255, 255,0.55)", fontFamily: "DM Sans, sans-serif" }}>
               Every website we build is accelerated by AI sub-agents that handle research, copywriting, and structural scaffolding. Every course we sell is the distilled knowledge from deploying these systems in production environments. Our clients get the benefit of both.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -670,27 +668,27 @@ function Contact() {
           <FadeIn>
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-6"
-                style={{ background: "rgba(0,212,255,0.1)", border: "1px solid rgba(0,212,255,0.2)", color: "#00D4FF", fontFamily: "DM Sans, sans-serif" }}>
+                style={{ background: "rgba(255, 107, 53,0.1)", border: "1px solid rgba(255, 107, 53,0.2)", color: "#FF6B35", fontFamily: "DM Sans, sans-serif" }}>
                 <Mail className="w-3 h-3" /> Get In Touch
               </div>
-              <h2 className="text-4xl md:text-5xl font-black mb-6" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
+              <h2 className="text-4xl md:text-5xl font-black mb-6" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
                 Ready to<br /><span className="gradient-text">Automate?</span>
               </h2>
-              <p className="text-lg leading-relaxed mb-8" style={{ color: "rgba(232,240,254,0.6)", fontFamily: "DM Sans, sans-serif" }}>
+              <p className="text-lg leading-relaxed mb-8" style={{ color: "rgba(255, 255, 255,0.6)", fontFamily: "DM Sans, sans-serif" }}>
                 Whether you need a website built or want to deploy your first AI agent, we are here to make it happen. Send us a message and we will respond within 4 hours.
               </p>
               <div className="flex flex-col gap-4">
                 {[
-                  { icon: <ExternalLink className="w-4 h-4" />, label: "Fiverr Profile", value: "fiverr.com/automataforge", color: "#00D4FF" },
-                  { icon: <ExternalLink className="w-4 h-4" />, label: "Upwork Profile", value: "upwork.com/automataforge", color: "#FF2D78" },
-                  { icon: <Mail className="w-4 h-4" />, label: "Email", value: "hello@automataforge.com", color: "#7B61FF" },
+                  { icon: <ExternalLink className="w-4 h-4" />, label: "Fiverr Profile", value: "fiverr.com/nextlevelai", color: "#FF6B35" },
+                  { icon: <ExternalLink className="w-4 h-4" />, label: "Upwork Profile", value: "upwork.com/nextlevelai", color: "#FF6B35" },
+                  { icon: <Mail className="w-4 h-4" />, label: "Email", value: "hello@nextlevelaiservices.com", color: "#7B61FF" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: `${item.color}15`, color: item.color }}>
                       {item.icon}
                     </div>
                     <div>
-                      <div className="text-xs" style={{ color: "rgba(232,240,254,0.4)", fontFamily: "DM Sans, sans-serif" }}>{item.label}</div>
+                      <div className="text-xs" style={{ color: "rgba(255, 255, 255,0.4)", fontFamily: "DM Sans, sans-serif" }}>{item.label}</div>
                       <div className="text-sm font-medium" style={{ color: item.color, fontFamily: "DM Sans, sans-serif" }}>{item.value}</div>
                     </div>
                   </div>
@@ -702,9 +700,9 @@ function Contact() {
           <FadeIn delay={0.2}>
             {submitted ? (
               <div className="glass-card p-8 text-center">
-                <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: "#00D4FF" }} />
-                <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>Message Received!</h3>
-                <p className="text-sm" style={{ color: "rgba(232,240,254,0.6)", fontFamily: "DM Sans, sans-serif" }}>
+                <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: "#FF6B35" }} />
+                <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>Message Received!</h3>
+                <p className="text-sm" style={{ color: "rgba(255, 255, 255,0.6)", fontFamily: "DM Sans, sans-serif" }}>
                   We will respond within 4 hours. Check your inbox.
                 </p>
               </div>
@@ -712,37 +710,37 @@ function Contact() {
               <form onSubmit={handleSubmit} className="glass-card p-8 flex flex-col gap-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "rgba(232,240,254,0.5)", fontFamily: "DM Sans, sans-serif" }}>Name</label>
+                    <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "rgba(255, 255, 255,0.5)", fontFamily: "DM Sans, sans-serif" }}>Name</label>
                     <input
                       type="text"
                       required
                       value={form.name}
                       onChange={e => setForm({ ...form, name: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all duration-200"
-                      style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(0,212,255,0.2)", color: "#E8F0FE", fontFamily: "DM Sans, sans-serif" }}
+                      style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255, 107, 53,0.2)", color: "#FFFFFF", fontFamily: "DM Sans, sans-serif" }}
                       placeholder="Your name"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "rgba(232,240,254,0.5)", fontFamily: "DM Sans, sans-serif" }}>Email</label>
+                    <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "rgba(255, 255, 255,0.5)", fontFamily: "DM Sans, sans-serif" }}>Email</label>
                     <input
                       type="email"
                       required
                       value={form.email}
                       onChange={e => setForm({ ...form, email: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all duration-200"
-                      style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(0,212,255,0.2)", color: "#E8F0FE", fontFamily: "DM Sans, sans-serif" }}
+                      style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255, 107, 53,0.2)", color: "#FFFFFF", fontFamily: "DM Sans, sans-serif" }}
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "rgba(232,240,254,0.5)", fontFamily: "DM Sans, sans-serif" }}>I'm Interested In</label>
+                  <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "rgba(255, 255, 255,0.5)", fontFamily: "DM Sans, sans-serif" }}>I'm Interested In</label>
                   <select
                     value={form.service}
                     onChange={e => setForm({ ...form, service: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all duration-200"
-                    style={{ background: "rgba(13,27,53,0.8)", border: "1px solid rgba(0,212,255,0.2)", color: "#E8F0FE", fontFamily: "DM Sans, sans-serif" }}
+                    style={{ background: "rgba(13,27,53,0.8)", border: "1px solid rgba(255, 107, 53,0.2)", color: "#FFFFFF", fontFamily: "DM Sans, sans-serif" }}
                   >
                     <option value="" style={{ background: "#0D1B35" }}>Select a service...</option>
                     <option value="starter" style={{ background: "#0D1B35" }}>Starter Site ($299)</option>
@@ -754,13 +752,13 @@ function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "rgba(232,240,254,0.5)", fontFamily: "DM Sans, sans-serif" }}>Message</label>
+                  <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "rgba(255, 255, 255,0.5)", fontFamily: "DM Sans, sans-serif" }}>Message</label>
                   <textarea
                     rows={4}
                     value={form.message}
                     onChange={e => setForm({ ...form, message: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all duration-200 resize-none"
-                    style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(0,212,255,0.2)", color: "#E8F0FE", fontFamily: "DM Sans, sans-serif" }}
+                    style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255, 107, 53,0.2)", color: "#FFFFFF", fontFamily: "DM Sans, sans-serif" }}
                     placeholder="Tell us about your project or goals..."
                   />
                 </div>
@@ -779,29 +777,29 @@ function Contact() {
 // Footer
 function Footer() {
   return (
-    <footer className="py-12" style={{ background: "#050B18", borderTop: "1px solid rgba(0,212,255,0.1)" }}>
+    <footer className="py-12" style={{ background: "#1A1A1A", borderTop: "1px solid rgba(255, 107, 53,0.1)" }}>
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #00D4FF, #FF2D78)" }}>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #FF6B35, #FF6B35)" }}>
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-xl" style={{ fontFamily: "Syne, sans-serif", color: "#E8F0FE" }}>
-              Automata<span style={{ color: "#00D4FF" }}>Forge</span>
+            <span className="font-bold text-xl" style={{ fontFamily: "Syne, sans-serif", color: "#FFFFFF" }}>
+              Next Level<span style={{ color: "#FF6B35" }}>Forge</span>
             </span>
           </div>
           <div className="flex items-center gap-6">
             {["Services", "Course", "Pricing", "About", "Contact"].map(link => (
               <a key={link} href={`#${link.toLowerCase()}`} className="text-xs transition-colors duration-200"
-                style={{ color: "rgba(232,240,254,0.4)", fontFamily: "DM Sans, sans-serif" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#00D4FF")}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(232,240,254,0.4)")}>
+                style={{ color: "rgba(255, 255, 255,0.4)", fontFamily: "DM Sans, sans-serif" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#FF6B35")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255, 255, 255,0.4)")}>
                 {link}
               </a>
             ))}
           </div>
-          <div className="text-xs" style={{ color: "rgba(232,240,254,0.3)", fontFamily: "DM Sans, sans-serif" }}>
-            © 2024 AutomataForge. All rights reserved.
+          <div className="text-xs" style={{ color: "rgba(255, 255, 255,0.3)", fontFamily: "DM Sans, sans-serif" }}>
+            © 2024 Next Level AI Services. All rights reserved.
           </div>
         </div>
       </div>
@@ -812,7 +810,7 @@ function Footer() {
 // Main Page
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ background: "#050B18", fontFamily: "DM Sans, sans-serif" }}>
+    <div className="min-h-screen" style={{ background: "#1A1A1A", fontFamily: "DM Sans, sans-serif" }}>
       <Navbar />
       <Hero />
       <Services />
